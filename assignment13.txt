@@ -1,0 +1,172 @@
+                                                                       Assignment - 13 A Job Ready Bootcamp in C++, DSA and IOT MySirG
+
+                                                                                   More on Recursion in C Language
+_____________________________________________________________________________________________________________________________________________________________________________________________
+
+
+1. Write a recursive function to calculate sum of first N natural numbers.
+
+Ans.#include<iostream>
+using namespace std;
+int sum(int n) {
+	if(n==1) return 1;
+	return n+sum(n-1); 
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<"Sum : "<<sum(n);
+	return 0;
+}
+
+
+2. Write a recursive function to calculate sum of first N odd natural numbers.
+
+Ans.#include<iostream>
+using namespace std;
+int sum(int n) {
+	if(n==1) return 1;
+	return (n*2-1)+sum(n-1);
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<"Sum : "<<sum(n);
+	return 0;
+}
+
+
+3. Write a recursive function to calculate sum of first N odd natural numbers.
+
+Ans.#include<iostream>
+using namespace std;
+int sum(int n) {
+	if(n==1) return 1;
+	return (n*2-1)+sum(n-1);
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<"Sum : "<<sum(n);
+	return 0;
+}
+
+
+
+4. Write a recursive function to calculate sum of squares of first n natural numbers.
+
+Ans.#include<iostream>
+using namespace std;
+int square(int n) {
+	if(n==1) return 1;
+	return (n*n)+square(n-1);
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<"Sum Of Squares : "<<square(n);
+	return 0;
+}
+
+5. Write a recursive function to calculate sum of digits of a given number.
+
+Ans.#include<iostream>
+using namespace std;
+int sumofdigits(int n) {
+	if(n/10==0)return n;
+	return (n%10)+sumofdigits(n/10);
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<"Sum Of Digits : "<<sumofdigits(n);
+	return 0;
+}
+
+6. Write a recursive function to calculate factorial of a given number.
+
+Ans.#include<iostream>
+using namespace std;
+int factorial(int n) {
+	if(n==1 ||n==0)return 1 ;
+	return n*factorial(n-1);
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<"Factorial : "<<factorial(n);
+	return 0;
+}
+
+7. Write a recursive function to calculate HCF of two numbers.
+
+Ans.#include<iostream>
+using namespace std;
+int hcf(int x,int y) {
+	if(x==y)return x;
+	if(x%y==0)return y;
+	if(y%x==0)return x;
+	if(x>y)return hcf(x%y,y);
+	else return hcf(x,y%x);
+}
+int main() {
+	int x,y;
+	cin>>x>>y;
+	cout<<"HCF : "<<hcf(x,y);
+	return 0;
+}
+
+8. Write a recursive function to print first N terms of Fibonacci series.
+
+Ans.#include<iostream>
+using namespace std;
+int fibonacci(int);
+int main() {
+	int n;
+	cin>>n;
+	for(int i=1; i<=n; i++)
+		cout<<endl<<fibonacci(i);
+	return 0;
+}
+int fibonacci(int n) {
+	if(n==1)return 0;
+	if(n==2)return 1;
+
+
+	return fibonacci(n-1)+fibonacci(n-2);
+
+
+}
+
+
+9. Write a program in C to count the digits of a given number using recursion.
+
+Ans.#include<iostream>
+using namespace std;
+int count_digits(int n) {
+	if(n==0)return 0;
+	return (1+count_digits(n/10));
+}
+int main() {
+	int n;
+	cin>>n;
+	cout<<count_digits(n);
+	return 0;
+}
+
+
+10. Write a program in C to calculate the power of any number using recursion.
+
+Ans.#include<iostream>
+using namespace std;
+int power(int n,int pow) {
+	if(pow==0)return 1;
+	return n*power(n,pow-1);
+}
+int main() {
+	int n,pow;
+	cin>>n;
+	cin>>pow;
+	cout<<power(n,pow);
+	return 0;
+}
